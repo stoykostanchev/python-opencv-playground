@@ -14,3 +14,10 @@ docker run -p 4000:80 bookings-base
 
 
 
+See https://gist.github.com/Hell0w/84513beda0b8bada8b5323afc3e491d9 as an alt to image grab
+
+https://python-mss.readthedocs.io/examples.html#one-screen-shot-per-monitor
+
+https://stackoverflow.com/questions/29217543/why-does-this-solve-the-no-display-environment-issue-with-matplotlib
+
+http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/

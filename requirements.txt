@@ -1,2 +1,4 @@
-Flask
-Redis
+numpy
+pillow
+opencv-python
+mss

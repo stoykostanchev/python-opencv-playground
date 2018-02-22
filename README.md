@@ -28,3 +28,5 @@ https://linuxmeerkat.wordpress.com/2014/10/17/running-a-gui-application-in-a-doc
 https://pythonprogramming.net/canny-edge-detection-gradients-python-opencv-tutorial/
 
 createBackgroundSubtractorMOG2 - an opencv fn to reduce bg
+
+https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/text_recognition_cnn.cpp

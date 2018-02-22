@@ -2,3 +2,4 @@ numpy
 pillow
 opencv-python
 mss
+opencv-contrib-python

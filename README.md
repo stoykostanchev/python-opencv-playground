@@ -10,7 +10,9 @@ Building the image / e.g. the container mold:
 docker build -t bookings-base .
 
 Running the image / e.g. creating a concrete container:
-docker run -p 4000:80 bookings-base
+docker run bookings-base
+
+Options have suggested build -e DISPLAY:$DISPLAY -v [some tmp/x11.. folders] to share the display, but randr threw errors
 
 
 
@@ -21,3 +23,4 @@ https://python-mss.readthedocs.io/examples.html#one-screen-shot-per-monitor
 https://stackoverflow.com/questions/29217543/why-does-this-solve-the-no-display-environment-issue-with-matplotlib
 
 http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/
+https://linuxmeerkat.wordpress.com/2014/10/17/running-a-gui-application-in-a-docker-container/

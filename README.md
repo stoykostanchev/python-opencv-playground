@@ -24,3 +24,5 @@ https://stackoverflow.com/questions/29217543/why-does-this-solve-the-no-display-
 
 http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/
 https://linuxmeerkat.wordpress.com/2014/10/17/running-a-gui-application-in-a-docker-container/
+
+https://pythonprogramming.net/canny-edge-detection-gradients-python-opencv-tutorial/

@@ -3,3 +3,5 @@ pillow
 opencv-python
 mss
 opencv-contrib-python
+tesseract-ocr
+pytesseract

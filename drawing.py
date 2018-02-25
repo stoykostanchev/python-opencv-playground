@@ -1,22 +1,10 @@
 import sys
 import pyautogui
+import thread
 from Xlib import display 
-
-# pyautogui.click()
-
-# pyautogui.moveTo(100, 150)
-# pyautogui.moveRel(0, 10)  # move mouse 10 pixels down
-# pyautogui.click()
-# pyautogui.moveRel(0, -50)
-# pyautogui.dragRel(0, 101)  # drag mouse 10 pixels down
-# pyautogui.moveRel(0, -50)
-
 from pynput import keyboard, mouse
 
-# The key combination to check
 COMBINATION = {keyboard.Key.shift, keyboard.Key.ctrl}
-
-# The currently active modifiers
 current = set()
 drawnX = 0
 drawnY = 0
@@ -40,14 +28,16 @@ def on_click(x, y, button, pressed):
             print('All modifiers active!')
             draw()
 
-mouseListener = mouse.Listener(on_click=on_click)
+def getLineCoordinates():
+    return (100, 150)
 
 def draw():
    global drawnX
    global drawnY
    print("----- draw -----")
    pyautogui.click()
-   pyautogui.dragRel(100, 150)
+   coordinates = getLineCoordinates()
+   pyautogui.dragRel(coordinates[0], coordinates[1])
    pyautogui.click()
 
    qp = display.Display().screen().root.query_pointer()
@@ -69,11 +59,6 @@ def on_release(key):
     except KeyError:
         pass
 
-
-
-import thread
-
-
 def observe_keyboard():
    global COMBINATION
    global current
@@ -88,6 +73,7 @@ def observe_mouse():
    global COMBINATION
    global current
 
+   mouseListener = mouse.Listener(on_click=on_click)
    mouseListener.start()
 
 try:
@@ -98,4 +84,3 @@ except:
 
 while 1:
    pass
-

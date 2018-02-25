@@ -32,3 +32,7 @@ createBackgroundSubtractorMOG2 - an opencv fn to reduce bg
 https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/text_recognition_cnn.cpp
 
 Installed sudo apt-get install tesseract-ocr -> https://stackoverflow.com/questions/28741563/pytesseract-no-such-file-or-directory-error
+
+
+sudo pip install svn+https://svn.code.sf.net/p/python-xlib/code/trunk/
+

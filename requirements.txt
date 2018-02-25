@@ -1,7 +1,10 @@
 numpy
 pillow
 opencv-python
+pynput
 mss
+pyautogui
+python-xlib
 opencv-contrib-python
 tesseract-ocr
 pytesseract

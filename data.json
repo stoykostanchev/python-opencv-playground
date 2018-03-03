@@ -1,0 +1,37 @@
+{
+    "actionDefinitions": [
+        {
+            "name" : "write-hello",
+            "type" : "text",
+            "value": "Hello"
+        },
+        {
+            "name": "open-menu",
+            "type": "click",
+            "value": "template/wallMenu.png"
+        },
+        {
+            "name": "write-goodbye",
+            "type": "text",
+            "value": "Goodbye"
+        }
+
+    ],
+    "actions" : [
+        {
+            "name" : "poc",
+            "shortcut" : "ctrl + shift + A",
+            "execute": [
+                "write-hello",
+                "hello"
+            ]
+        },
+        {
+            "name" : "talk",
+            "shortcut" : "shift + space + W",
+            "execute": [
+                "write-goodbye"
+            ]
+        }
+    ]
+}

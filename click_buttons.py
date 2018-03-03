@@ -11,7 +11,7 @@ from PIL import Image
 import cv2
 import json
 
-data = json.load(open('data.json'))
+data = json.load(open('data.json')) W W W W
 actions = []
 
 for action in data["actions"]:
@@ -23,9 +23,7 @@ for action in data["actions"]:
             keys.add(keyboard.Key[key])
         except Exception:
             keys.add(keyboard.KeyCode.from_char(key))
-    actions.append({ "name": action["name"], "keyVals": keys })
-
-
+    actions.append({ "name": action["name"], "shortcut": keys, "commands": action["execute"]})
 
 
 sct = mss()
@@ -71,20 +69,25 @@ def clickBtn(btnImgSrc):
     pyautogui.moveTo(qp.root_x, qp.root_y)
 
 
-#clickBtn("templates/wallMenu.png")
-#clickBtn("templates/terminal.png")
-#clickBtn("templates/x.png")
+def executeAction(act):
+    if act["type"] == "text":
+        print(act["value"])
+    else :
+        if act["type"] == "click":
+            clickBtn(act["value"])
 
-
+def executeActionSeries(actionSeries):
+   for ass in actionSeries:
+       for ad in data["actionDefinitions"]:
+           if ad["name"] == ass:
+               executeAction(ad)
 
 def on_press(key):
     current.add(key)
 
-    print(current)
-
-    for combo in actions:
-        if all(k in current for k in combo["keyVals"]):
-            print(combo["name"])
+    for action in actions:
+        if all(k in current for k in action["shortcut"]):
+            executeActionSeries(action["commands"])
 
     if key == keyboard.Key.esc:
         return False

@@ -1,14 +1,14 @@
 {
     "actionDefinitions": [
         {
+            "name": "open-menu",
+            "type": "click",
+            "value": "templates/wallMenu.png"
+        },
+        {
             "name" : "write-hello",
             "type" : "text",
             "value": "Hello"
-        },
-        {
-            "name": "open-menu",
-            "type": "click",
-            "value": "template/wallMenu.png"
         },
         {
             "name": "write-goodbye",
@@ -20,15 +20,15 @@
     "actions" : [
         {
             "name" : "poc",
-            "shortcut" : "ctrl + shift + A",
+            "shortcut" : "space + shift + W",
             "execute": [
-                "write-hello",
-                "hello"
+                "open-menu",
+                "write-hello"
             ]
         },
         {
             "name" : "talk",
-            "shortcut" : "shift + space + W",
+            "shortcut" : "space + shift+ G",
             "execute": [
                 "write-goodbye"
             ]
